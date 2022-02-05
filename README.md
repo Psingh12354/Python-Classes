@@ -10,7 +10,7 @@ def myfunc(a,b,c=0):
 >>myfunc(10,20,30,40) #will give you an error 3 param but take 4 parama
 ```
 
-### *kwargs args
+### *args args
 
 ```
 >> def myfunc(*args): #*args return tuple of parameter
