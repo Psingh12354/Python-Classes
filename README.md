@@ -34,3 +34,22 @@ def myfunc(a,b,c=0):
 {'fruit': 'apple', 'vege': 'tomatto', 'nice': 'hi'}
 My fruit is apple
 ```
+
+### scope in function
+
+```
+>>  def func1(x):
+        print(x)
+        x=10
+        print(x)
+        def func2():
+            x=20
+            print(x)
+        func2()
+
+    
+>>  func1(5)
+5
+10
+20
+```
