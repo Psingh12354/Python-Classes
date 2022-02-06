@@ -53,3 +53,20 @@ My fruit is apple
 10
 20
 ```
+
+### Use of Str in classes
+
+```
+>>  class Dog():
+        def __init__(self,breed):
+            self.breed=breed
+        def __str__(self):
+            return f"{self.breed}"
+
+    
+>>  a=Dog('Desi')
+>>  a
+<__main__.Dog object at 0x000002CB881757E0>
+>>  print(a)
+Desi
+```
