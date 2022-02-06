@@ -70,3 +70,28 @@ My fruit is apple
 >>  print(a)
 Desi
 ```
+
+### Some more code related to class
+
+```
+>>  class Dog():
+        def __init__(self,author,num):
+            self.author=author
+            self.num=num
+        def __str__(self):
+            return f"{self.author}"
+        def __len__(self):
+            return self.num
+        def __del__(self):
+            print("Something deleted")
+     
+>>  b=Dog('PK',20)
+>>  b
+<__main__.Dog object at 0x000002CB88174310>
+>>  print(b)
+PK
+>>  print(len(b))
+20
+>>  del b
+b
+```
