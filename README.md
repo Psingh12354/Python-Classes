@@ -169,3 +169,29 @@ Some more extra code
 512
 729
 ```
+### Fibonacci number
+
+```
+>>  def fibo(n):
+	    a=1
+	    b=1
+	    for i in range(n):
+		yield a
+		a,b=b,a+b
+
+        
+>>  for i in fibo(10):
+    	print(i)
+
+    
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+```
