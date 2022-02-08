@@ -135,3 +135,37 @@ Some extra code
 hello
 Some more extra code
 ```
+
+### Without generator
+
+```
+>>  def without_gen(n):
+	    result=[]
+	    for i in range(n):
+		result.append(i**3)
+	    return result
+
+>>  without_gen(10)
+[0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
+```
+
+### With Generator
+
+```
+>>  def generator(n):
+	    for i in range(n):
+		yield i**3
+        
+>>  for i in generator(10):
+	    print(i)
+0
+1
+8
+27
+64
+125
+216
+343
+512
+729
+```
