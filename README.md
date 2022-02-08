@@ -205,3 +205,18 @@ Some more extra code
 >>  for i in gen(10):
     	print(i)
 ```
+### Another use of generator
+
+```
+>>  def gen():
+	    for i in range(3):
+		yield i        
+>>  g=gen()
+>>  g.__next__()
+0
+>>  g.__next__()
+1
+>>  g.__next__()
+2
+>>  g.__next__()
+```
