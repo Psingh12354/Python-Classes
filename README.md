@@ -195,3 +195,13 @@ Some more extra code
 34
 55
 ```
+### Simple generator
+```
+>>  def gen(n):
+	    for i in range(n):
+		yield i
+
+        
+>>  for i in gen(10):
+    	print(i)
+```
