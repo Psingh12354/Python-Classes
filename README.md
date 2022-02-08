@@ -220,3 +220,19 @@ Some more extra code
 2
 >>  g.__next__()
 ```
+### Iterator 
+
+```
+>>  string='hello'
+>>  s=iter(string)
+>>  s.__next__()
+'h'
+>>  s.__next__()
+'e'
+>>  s.__next__()
+'l'
+>>  s.__next__()
+'l'
+>>  s.__next__()
+'o'
+```
