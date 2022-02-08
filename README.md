@@ -112,3 +112,26 @@ hello
 	 greet
 		 Welcome
 ```
+
+### Decorator
+```
+>>  def original_func():
+    	print('hello')
+>>  def new_decorator(orignal_func):
+	    def wrap_func():
+		print("Some extra code")
+		original_func()
+		print('Some more extra code')
+	    return wrap_func()
+
+>>  decorated_func=new_decorator(func_need_decorator)
+Some extra code
+hello
+Some more extra code
+>>  @new_decorator
+    def func_need_decorator():
+    print("Decorated")
+Some extra code
+hello
+Some more extra code
+```
