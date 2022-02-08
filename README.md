@@ -95,3 +95,20 @@ PK
 >>  del b
 b
 ```
+### Why decorator
+
+```
+### In this code we can call hello function but can't directly call greet and welcome so we go for decorator
+>>  def hello():
+        print("hello")
+        def greet():
+            return "\t greet"
+        def welcome():
+            return '\t\t Welcome'
+        print(greet())
+        print(welcome())    
+>>  hello()
+hello
+	 greet
+		 Welcome
+```
