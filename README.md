@@ -299,4 +299,37 @@ result_two=y+x
 '405-555-7777'
 >>  result.group(1)                       
 '405'
+
+### Operator Or(|), wildcard(.), 
+
+>>  string="Hello dog it's me"
+>>  re.search(r'cat|dog',string) #| this is or symbol
+<re.Match object; span=(6, 9), match='dog'>
+>>  re.search(r'.e',string) #.e is a wildcard similar to like (_) operator can use multiple for multiple single char
+<re.Match object; span=(0, 2), match='He'>
+>>  string="Hello 1 dog it's me"
+>>  re.findall(r'^\d',string) #^\d it's mean the string start with number
+[]
+>>  string="1 Hello dog it's me"
+>>  re.findall(r'^\d',string) #^\d it's mean the string start with number
+['1']
+>>  string="Number ends with 2"
+>>  re.findall(r'\d$',string) #^\$ it means number at last
+['2']
+>>  string= "there are 3 number 35 inside this sentence"
+>>  pattern=r'[^\d]' # to exclude numbers
+>>  re.findall(pattern,string)
+['t', 'h', 'e', 'r', 'e', ' ', 'a', 'r', 'e', ' ', ' ', 'n', 'u', 'm', 'b', 'e', 'r', ' ', ' ', 'i', 'n', 's', 'i', 'd', 'e', ' ', 't', 'h', 'i', 's', ' ', 's', 'e', 'n', 't', 'e', 'n', 'c', 'e']
+>>  ''.join(re.findall(pattern,string))
+'there are  number  inside this sentence'
+>>  pattern=r'[^\d]+' #
+>>  re.findall(pattern,string)
+['there are ', ' number ', ' inside this sentence']
+>>  string="This is, punctuation. marks?"
+>>  re.findall(r'[^!,.?]+',string)  #it remove all punctuation marks
+['This is', ' punctuation', ' marks']
+>>  string="only find hyphen-word in this-sentence"
+>>  re.findall(r'[\w]+-[\w]+',string)
+['hyphen-word', 'this-sentence']
+
 ```
