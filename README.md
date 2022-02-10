@@ -248,3 +248,27 @@ result_one=y+z
 pdb.set_trace()
 result_two=y+x
 ```
+### Regular expression regex or re
+
+```
+>>  string="hello world 123 456"
+>>  pattern="123"
+>>  import re
+>>  re.search(pattern,string)
+<re.Match object; span=(12, 15), match='123'>
+>>  match=re.search(pattern,string)
+>>  match.span()
+(12, 15)
+>>  match.start()
+12
+>>  match.end()
+15
+>>  string="hello world 123 456 123"
+>>  re.findall(pattern,string)
+['123', '123']
+>>  match=re.search(pattern,string)
+>>  for match in re.finditer(pattern,string):
+    	print(match)
+<re.Match object; span=(12, 15), match='123'>
+<re.Match object; span=(20, 23), match='123'>
+```
