@@ -274,3 +274,29 @@ result_two=y+x
 ```
 <img src="https://github.com/Psingh12354/Python-Classes/blob/main/img1.jpeg" width="650" height="300">
 <img src="https://github.com/Psingh12354/Python-Classes/blob/main/img2.jpeg" width="650" height="300">
+
+### Some more about re
+
+```
+>>  import re
+>>  text="My phone number is 405-555-7777"
+>>  phone=re.search(r'\d\d\d-\d\d\d-\d\d\d\d',text)
+>>  phone
+<re.Match object; span=(19, 31), match='405-555-7777'>
+>>  phone.group()
+'405-555-7777'
+>>  # using quantifiers
+>>  phone=re.search(r'\d{3}-\d{3}-\d{4}',text)
+>>  phone
+<re.Match object; span=(19, 31), match='405-555-7777'>
+>>  phone_pattern=re.compile(r'(\d{3})-(\d{3})-(\d{4}))
+
+### Compile run the multiple search at once
+
+>>  phone_pattern=re.compile(r'(\d{3})-(\d{3})-(\d{4})')
+>>  result=re.search(phone_pattern,text)                       
+>>  result.group()                       
+'405-555-7777'
+>>  result.group(1)                       
+'405'
+```
