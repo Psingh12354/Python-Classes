@@ -335,13 +335,13 @@ result_two=y+x
 
 ### How to remove data using pop and store it in third variable
 ```
-lis=[1,2,3,4,5]
-r=lis.pop(lis.index(2))
-r
+>>  lis=[1,2,3,4,5]
+>>  r=lis.pop(lis.index(2))
+>>  r
 2
-lis
+>>  lis
 [1, 3, 4, 5]
-lis.append(r)
-lis
+>>  lis.append(r)
+>>  lis
 [1, 3, 4, 5, 2]
 ```
