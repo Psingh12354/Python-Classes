@@ -345,3 +345,29 @@ result_two=y+x
 >>  lis
 [1, 3, 4, 5, 2]
 ```
+### Csv
+```
+>>  import csv
+>>  data=open('file.csv')
+>>  csv_data=csv.reader(data)
+>>  csv_data
+<_csv.reader object at 0x000001A987422E60>
+>>  data_lines=list(csv_data)
+>>  data_lines
+[['Name', ' Age'], ['Priyanshu', ' 21'], ['Singh', '21']]
+>>  data=open('file.csv',encoding='utf-8')
+>>  len(data_lines)
+3
+>>  data_lines[0]
+['Name', ' Age']
+>>  for line in data_lines[:5]:
+        print(line)
+['Name', ' Age']
+['Priyanshu', ' 21']
+['Singh', '21']
+>>  data_lines[1][1] #row 1 and col 1
+' 21'
+>>  data_lines[1][0] #row 1 col 0
+'Priyanshu'
+
+```
