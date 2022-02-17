@@ -405,3 +405,50 @@ result_two=y+x
 >>  f.close()
 >>  pdf_output.close()
 ```
+
+### String
+```
+>>  s='hello world'
+>>  s.capitalize()
+'Hello world'
+>>  s.upper()
+'HELLO WORLD'
+>>  s.lower()
+'hello world'
+>>  s.count('i')
+0
+>>  s.find('o')
+4
+>>  s.center(20,'z')
+'zzzzhello worldzzzzz'
+>>  print('hello\thi')
+hello	hi
+>>  'hello\thi'.expandtabs()
+'hello   hi'
+>>  s.isalnum()
+False
+>>  s.isalpha()
+False
+>>  s
+'hello world'
+>>  s.isalpha()
+False
+>>  'hello'.isalpha()
+True
+>>  'hello'.isalnum()
+True
+>>  s.islower()
+True
+>>  s.isspace()
+False
+>>  s.istitle()
+False
+>>  s.endswith('d')
+True
+>>  s[-1]=='d'
+True
+>>  s.split('e')
+['h', 'llo world']
+>>  s.partition('i')
+('hello world', '', '')
+```
