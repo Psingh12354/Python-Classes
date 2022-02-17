@@ -513,3 +513,31 @@ True
 >>  s2.issuperset(s1)
 True
 ```
+
+### dictionary
+```
+>>  d={'k1':1,'k2':2}
+>>  {x: x**2 for x in range(10)}
+{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+>>  {k: v**2 for k,v in zip(['a','b'],range(10))}
+{'a': 0, 'b': 1}
+>>  for i in d.items():
+    print(i)
+('k1', 1)
+('k2', 2)
+>>  for i in d.keys():
+    print(i)    
+k1
+k2
+>>  for i in d.values():
+    print(i)  
+1
+2
+>>  d.items()
+dict_items([('k1', 1), ('k2', 2)])
+>>  d.values()
+dict_values([1, 2])
+>>  d.keys()
+dict_keys(['k1', 'k2'])
+
+```
