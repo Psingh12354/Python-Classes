@@ -452,3 +452,64 @@ True
 >>  s.partition('i')
 ('hello world', '', '')
 ```
+### Set
+```
+>>  s=set()
+>>  s.add(1)
+>>  s.add(2)
+>>  s.add(1)
+>>  s
+{1, 2}
+>>  s.clear()
+>>  s
+set()
+>>  s={1,2,3}
+>>  sc=s.copy()
+>>  s.add(4)
+>>  sc
+{1, 2, 3}
+>>  s
+{1, 2, 3, 4}
+>>  s.difference(sc)
+{4}
+>>  s.difference_update(sc)
+>>  s1={1,2,3}
+>>  s2={1,4,5}
+>>  s1.difference_update(s2)
+>>  s2
+{1, 4, 5}
+>>  s1
+{2, 3}
+>>  sc
+{1, 2, 3}
+>>  sc.discard(2)
+??  sc
+{1, 3}
+>>  s1.intersection(s2)
+set()
+>>  s1
+{2, 3}
+>>  s2
+{1, 4, 5}
+>>  s1.add(1)
+>>  s1.intersection(s2)
+{1}
+>>  s1.intersection_update(s2)
+>>  s1
+{1}
+>>  s1={1,2}
+>>  s2={1,2,4}
+>>  s3={5}
+>>  s1.isdisjoint(s2) #they have intersection show return false
+False
+>>  s1.isdisjoint(s3)
+True
+>>  s1
+{1, 2}
+>>  s2
+{1, 2, 4}
+>>  s1.issubset(s2)
+True
+>>  s2.issuperset(s1)
+True
+```
