@@ -381,3 +381,27 @@ result_two=y+x
 >>  csv_write.writerows([['Name','Age'],['Priyanshu',21],['Singh',21]]) # to add a multiple rows
 >>  file_out.close()
 ```
+### PDF
+```
+>>  pip install PyPDF2 #cmd
+>>  import PyPDF2
+>>  f=open('file.pdf','rb')
+>>  pdf_reader=PyPDF2.PdfFileReader(f)
+>>  pdf_reader.numPages # count no of pages
+6
+>>  page_one=pdf_reader.getPage(0) #read page 1
+>>  page_one
+{'/Contents': IndirectObject(7, 0), '/MediaBox': [0, 0, 612, 792], '/Parent': IndirectObject(2, 0), '/Resources': {'/ExtGState': {'/GS9': IndirectObject(9, 0)}, '/Font': {'/FT10': IndirectObject(10, 0), '/FT15': IndirectObject(15, 0)}, '/XObject': {'/IM8': IndirectObject(8, 0)}}, '/Type': '/Page'}
+>>  page_one_text=page_one.extractText()
+>>  page_one_text #if gives a empty string check for other library rather than PyPDF2
+''
+>>  first_page=pdf_reader.getPage(0)
+>>  type(first_page)
+<class 'PyPDF2.pdf.PageObject'>
+>>  pdf_writer=PyPDF2.PdfFileWriter()
+>>  pdf_writer.addPage(first_page)
+>>  pdf_output=open('NewPdfFile.pdf','wb')
+>>  pdf_writer.write(pdf_output)
+>>  f.close()
+>>  pdf_output.close()
+```
