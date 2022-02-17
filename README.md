@@ -347,6 +347,8 @@ result_two=y+x
 ```
 ### Csv
 ```
+#read csv
+
 >>  import csv
 >>  data=open('file.csv')
 >>  csv_data=csv.reader(data)
@@ -370,4 +372,12 @@ result_two=y+x
 >>  data_lines[1][0] #row 1 col 0
 'Priyanshu'
 
+# write csv
+
+>>  file_out=open('save_file.csv',mode='w',newline='') #can use mode='a' if doesno't want to overwrite the file 
+>>  csv_write=csv.writer(file_out,delimiter=",")
+>>  csv_write.writerow(['Name','Age']) # to add a single row
+10
+>>  csv_write.writerows([['Name','Age'],['Priyanshu',21],['Singh',21]]) # to add a multiple rows
+>>  file_out.close()
 ```
