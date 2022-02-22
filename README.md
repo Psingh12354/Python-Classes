@@ -539,6 +539,10 @@ dict_items([('k1', 1), ('k2', 2)])
 dict_values([1, 2])
 >>  d.keys()
 dict_keys(['k1', 'k2'])
+>> from collections import Counter
+>>  res='hello world'
+>>  res=dict(Counter(res))
+>>  max(res,key=res.get)
 
 ```
 ### abs
