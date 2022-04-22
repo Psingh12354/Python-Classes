@@ -13,6 +13,13 @@ def myfunc(a,b,c=0):
 ### *args args
 
 ```
+>>> number =[1,2,3,4,5]
+>>> number
+[1, 2, 3, 4, 5]
+>>> print(*number)
+1 2 3 4 5
+>>> print(*'abc')
+a b c
 >> def myfunc(*args): #*args return tuple of parameter
     return sum(args)*0.05
 >> myfunc(10,20,30,40) #here you can pass n number of parameter
